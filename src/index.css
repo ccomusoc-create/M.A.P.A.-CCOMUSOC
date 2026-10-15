@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-anton: 'Anton', sans-serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --brand-primary: #0e98d6;
+    --brand-accent: #e65c00;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, .font-brand {
+    font-family: var(--font-anton);
+    letter-spacing: 0.03em;
+  }
+}
+
+.font-anton {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.font-sans, .font-inter {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Colores Solicitados */
+.bg-brand {
+  background-color: #0e98d6;
+}
+
+.text-brand {
+  color: #0e98d6;
+}
+
+.border-brand {
+  border-color: #0e98d6;
+}
+
+.bg-accent {
+  background-color: #e65c00;
+}
+
+.text-accent {
+  color: #e65c00;
+}
+
+.border-accent {
+  border-color: #e65c00;
+}
+
+/* Superficies Solicitadas */
+.light-surface {
+  background-color: #f4f6f9;
+}
+
+.dark-surface {
+  background-color: #1e1e1e;
+}
+
+/* Leaflet map styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  font-family: var(--font-sans);
+}
+
+.dark .leaflet-tile-pane {
+  filter: brightness(0.7) invert(1) contrast(2.5) hue-rotate(190deg) saturate(0.3);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  overflow: hidden;
+}
+
+.dark .leaflet-popup-content-wrapper {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #333333;
+}
+
+.dark .leaflet-popup-tip {
+  background-color: #1e1e1e;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.4;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(14, 152, 214, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(14, 152, 214, 0.5);
+}
+
+/* Audio visualizer recording animation */
+@keyframes pulse-wave {
+  0%, 100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.recording-bar {
+  animation: pulse-wave 1s ease-in-out infinite;
+}
+
+/* Print styles for PDF report generation */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  header, nav, .no-print, button:not(.print-show) {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-break-inside-avoid {
+    break-inside: avoid;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "CComuSoc - Mapa Interactivo de Comunicación para el Desarrollo",
+  "description": "Plataforma de geolocalización de impacto social, recolección de testimonios comunitarios, analítica en tiempo real, sincronización con Google Sheets y WordPress.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
