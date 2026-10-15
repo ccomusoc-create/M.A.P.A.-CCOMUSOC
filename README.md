@@ -1,4 +1,4 @@
-# 🗺️ M.A.P.A. COMUNITARIO
+# 🗺️ M.A.P.A. CCOMUSOC
 ### Monitoreo y Alerta de Proyectos Autónomos para el Desarrollo
 **Un proyecto de código abierto para [ccomusoc.com.ar](https://ccomusoc.com.ar)**
 
